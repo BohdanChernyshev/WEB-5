@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9</title>
+
+  </head>
+
+  
+
+  
+  <body>
+	<script>
+
+		function Add(a,b)
+		{
+		return a+b;
+		}
+		
+		function Sub(a,b)
+		{
+		return a-b;
+		}
+		
+		function Mul(a,b)
+		{
+		return a*b;
+		}
+		
+		function Div(a,b)
+		{
+		if(b==0) return NaN;
+		let res=a/b;
+		return res.toFixed(5);
+		}
+		
+		function Calculate()
+		{
+			let a = Number(document.getElementById("a").value),
+		b = Number(document.getElementById("b").value);
+		
+		let choice=document.getElementById("calc");
+		let ch= Number(choice.options[choice.selectedIndex].value);
+		//document.write(ch);
+		switch(ch)
+		{
+		case 1: document.getElementById("result").innerHTML = Add(a,b); 
+		break;
+		case 2: document.getElementById("result").innerHTML = Sub(a,b);
+		break;
+		case 3: document.getElementById("result").innerHTML = Mul(a,b); 
+		break;
+		case 4: document.getElementById("result").innerHTML = Div(a,b);
+		break;
+		}
+		}
+		
+	</script>
+	
+	<input type="digit" placeholder="Enter digit a"  id="a">
+	<select id="calc">
+		<option value="1">+</option>
+		<option value="2">-</option>
+		<option value="3">*</option>
+		<option value="4">/</option>
+	</select>
+	<input type="digit" placeholder="Enter digit b"  id="b">
+	=
+	<output type="digit" id="result"></output>	
+	<br>
+	<button type="button" onclick="Calculate()" >Calculate</button>
+	<br>
+	
+	</output>
+   
+ 
+  </body>
+</html>

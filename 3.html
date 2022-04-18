@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3</title>
+
+  </head>
+
+
+  <body>
+  <h1>Volume & Square of a Cilinder</h1>
+	<script>
+		function Vol_n_Squa(){
+		let r = Number(document.getElementById("radius").value),
+		h = Number(document.getElementById("heigh").value);
+		document.getElementById("volume").innerHTML = Math.PI * r * r * h;
+		document.getElementById("square").innerHTML = 2 * Math.PI * r * ( r + h );
+		} 
+	</script>
+	r =
+	<input type="digit" placeholder="Enter radius"  id="radius" style="margin: 10px; ">
+	<br>
+	
+	h =
+	<input type="digit" placeholder="Enter heigh"  id="heigh" style="margin: 10px; ">	
+	<br>
+	
+	<button type="button" onclick="Vol_n_Squa()" style="margin: 20px; ">Button</button>
+	<br>
+	
+	V =
+	<output type="digit" id="volume" style="margin: 10px;"></output>
+	<br>
+	
+	S =
+	<output type="digit" id="square"  style="margin: 10px;"></output>
+	</output>
+   <br>
+ 
+  </body>
+</html>

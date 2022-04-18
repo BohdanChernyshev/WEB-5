@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10</title>
+
+  </head>
+
+
+  <body>
+	<script>
+		function Func(n) 
+		{
+		let task1=document.createElement('h3');
+		task1.innerHTML=`${n} is `;
+			if(n>0) {task1.innerHTML+="positive.";}
+			else if(n<0) {task1.innerHTML+="negative.";}
+			else {task1.innerHTML+="null.";}
+		document.body.appendChild(task1);
+		
+		
+		
+		let isPrime=true;
+		let task2=document.createElement('h3');
+		for(let i = 2, s = Math.sqrt(n); i <= s; i++)
+        if(n % i == 0) isPrime = false; 
+		
+		if(isPrime) task2.innerHTML=`${n} is prime.`;
+		else task2.innerHTML=`${n} is not prime.`;
+		document.body.appendChild(task2);
+		
+		
+		let divided=false;
+		let task3=document.createElement('h3');
+		task3.innerHTML=`${n} is divided into`;
+		if(n%9==0) {
+		task3.innerHTML+=" 9,";
+		divided=true;
+		}
+		if(n%6==0) {
+		task3.innerHTML+=" 6,";
+		divided=true;
+		}
+		if(n%5==0) {
+		task3.innerHTML+=" 5,";
+		divided=true;
+		}
+		if(n%3==0) {
+		task3.innerHTML+=" 3,";
+		divided=true;
+		}
+		if(n%2==0) {
+		task3.innerHTML+=" 2,";
+		divided=true;
+		}
+		if(divided) {
+		task3.innerHTML=task3.innerHTML.replace(/.$/,".");
+		document.body.appendChild(task3);
+		}
+		}
+		
+		let n = Number(prompt('Enter N', ''));
+		Func(n);
+	
+	</script>
+	
+ 
+  </body>
+</html>

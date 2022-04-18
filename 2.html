@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2</title>
+
+  </head>
+
+  
+
+  
+  <body>
+	<script>
+		function Average(){
+		let a = Number(document.getElementById("n1").value),
+		b = Number(document.getElementById("n2").value), 
+		c = Number(document.getElementById("n3").value);
+		document.getElementById("result").innerHTML = (a+b+c)/3;
+		}
+	</script>
+	
+	<input type="digit" placeholder="Enter digit"  id="n1">	
+	<input type="digit" placeholder="Enter digit"  id="n2">	
+	<input type="digit" placeholder="Enter digit"  id="n3">	
+	<br>
+	<button type="button" onclick="Average()" >Button</button>
+	<br>
+	<output type="digit" id="result">
+	</output>
+   
+ 
+  </body>
+</html>

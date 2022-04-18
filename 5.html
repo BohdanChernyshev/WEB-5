@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5</title>
+
+  </head>
+
+
+  <body>
+	<script>
+		function factorial(n) {
+			let res = 1;
+			while (n>1) 
+			{res *= n ;
+			n--;
+			}
+			return res;
+		}
+	
+		let n = Number(prompt('Enter N', ''));
+		let res = factorial(n);
+		let data = document.createElement('h2');
+		data.innerHTML = `You entered: ${n}<br>`;
+		document.body.appendChild(data);
+		
+		let result= document.createElement('h2');
+		res=factorial(n);
+		result.innerHTML = `Factorial: ${res}<br>`;
+		document.body.appendChild(result);
+		
+
+    
+	</script>
+	
+ 
+  </body>
+</html>

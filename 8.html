@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8</title>
+
+  </head>
+
+
+  <body>
+
+
+	<script>
+
+  /*function arrayTable(rows, cols) {
+    var arr = new Array(rows);
+
+    for (var i = 0; i < rows; i++) {
+
+      newArray[i] = new Array(cols)
+      for (var j = 0; j < cols; j++) {
+        let a = Math.floor(Math.random() * (100 - 20 + 1) - 20)
+        newArray[i][j] = a
+      }
+    }
+    return newArray
+  }*/
+  
+	const N=5;
+	let array = [[0,0,0,0,0,],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
+    
+	for(let i=0; i<5; i++)
+	{
+		for(let j=0; j<5; j++)
+		{
+			array[i][j]=(Math.floor(Math.random() * 200)-100);
+		}
+	}
+     
+	let t1 =document.createElement('h2');
+	t1.innerHTML="Initial Array:<br>";
+	document.body.appendChild(t1);
+	
+    let dat = document.createElement('h3');
+
+	  for (var i = 0; i <N ; i++) {
+				dat.innerHTML += "[";
+                dat.innerHTML += array[i];
+				dat.innerHTML += "]<br>";
+	  }
+	  document.body.appendChild(dat);
+	 
+
+	for(let i=0; i<N; i++)
+	{
+		
+		if(array[i][i]<0) array[i][i]=0;
+		else array[i][i]=1;
+		
+	}
+	 
+	 let t2 =document.createElement('h2');
+	t2.innerHTML="Gotten Array:<br>";
+	document.body.appendChild(t2);
+	
+	let got = document.createElement('h3');
+
+	  for (var i = 0; i <N ; i++) {
+				got.innerHTML += "[";
+                got.innerHTML += array[i];
+				got.innerHTML += "]<br>";
+	  }
+	  document.body.appendChild(got);
+
+
+	</script>
+	
+ 
+  </body>
+</html>

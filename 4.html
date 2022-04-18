@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4</title>
+
+  </head>
+
+
+  <body>
+	<script>
+		let a = Number(prompt('Enter А', ''))
+    let b = Number(prompt('Enter В (must be bigger than A)', ''))
+    var sum = 0
+
+    if (a < b) {
+      let range = document.createElement('h2')
+      range.innerHTML = `Input [ ${a};${b} ]`
+      document.body.appendChild(range)
+    } else {
+      let range = document.createElement('h2')
+      range.innerHTML = 'Error: wrong data'
+      document.body.appendChild(range)
+    }
+
+    while (a < b) {
+      a++
+      if (a < b) sum += a
+      if (a % 2 != 0) {
+        let Odd = document.createElement('h3')
+        Odd.innerHTML = `<br> odd number: ${a}`
+        document.body.appendChild(Odd)
+      }
+    }
+    let Sum = document.createElement('h3')
+    Sum.innerHTML = `Sum: ${sum}`
+    document.body.appendChild(Sum)
+	</script>
+	
+ 
+  </body>
+</html>

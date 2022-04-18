@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7</title>
+
+  </head>
+
+
+  <body>
+
+	<script>
+		
+	let N = Number(prompt('Enter N', ''));
+    let array = [];
+    let odd = [];
+
+    for (i = 0; i < N; i++) {
+      let a = Math.round(Math.random() * N);
+      array.push(a);
+    }
+
+    let arr = document.createElement('h3');
+    arr.innerHTML = `the Array: [${array}]`;
+    document.body.appendChild(arr);
+
+
+    let max = document.createElement('h4')
+    max.innerHTML = `Max: ${Math.max.apply(null, array)}`
+    document.body.appendChild(max)
+
+    let min = document.createElement('h4')
+    min.innerHTML = `Min: ${Math.min.apply(null, array)}`
+    document.body.appendChild(min)
+
+  let average=0, sum=0;
+	for(let i=0; i<N; i++)
+	{
+	 average+=array[i];
+	 sum+=array[i];
+	  if(array[i]%2!=0) odd.push(array[i]);
+	}
+	average/=N;
+
+
+    let aver = document.createElement('h4');
+    aver.innerHTML = `Average: ${average.toFixed(3)}`;
+    document.body.appendChild(aver);
+
+    let od = document.createElement('h4');
+    od.innerHTML = `Odd: [${odd}]`;
+    document.body.appendChild(od);
+
+
+    let s = document.createElement('h4');
+    s.innerHTML = `Sum: ${sum}`;
+    document.body.appendChild(s);
+
+	</script>
+	
+ 
+  </body>
+</html>
